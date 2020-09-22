@@ -1,0 +1,59 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package newpackage;
+
+/**
+ *
+ * @author Leandro
+ */
+public class Patient {
+    
+    String name;
+    int age;
+    double weight;
+    double height;
+    String problem;
+    int priority;
+    
+    public Patient(){}
+    public Patient(String n, int a,double w, double h, String pro, int prio)
+    {
+            name = n;
+            age = a;
+            weight = w;
+            height = h; 
+            problem = pro;
+            priority = prio;           
+    }
+     public String getname(){
+         return name;
+     }
+      public int getage(){
+        return age;
+     }
+      public double getweight(){
+        return weight;
+     }
+      public double getheight(){
+        return height;
+     }
+      public String getpro(){
+        return problem;
+     }
+      public int getprio(){
+        return priority;
+     }
+      public void printpatient(){
+          System.out.println("new patient \n"+ "name:\t" + getname()+"\n age:\t"+getage()+"\n weight:\t"+getweight()+"\n height: \t"+getheight()+"\n problem: \t"+getpro()+"\n priority: \t"+getprio() );
+      }
+    
+    
+    public static void main(String[] args){
+        Patient patient1 = new Patient("albert",13,130,5.7,"headache",3);
+        patient1.printpatient();
+    }
+
+}
